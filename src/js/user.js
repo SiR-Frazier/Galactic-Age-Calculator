@@ -1,75 +1,67 @@
 export class User {
-  constructor(age) {
-    // this.birthYear = birthYear;
-    // this.currentYear = 2018;
+  constructor(age, birthday) {
     this.age = age;
-    // this.birthdate = birthdate;
-    this.earthLifeExpectancy = 71.4;
+    this.birthday = birthday
+    this.earthLifeExpectancy = earthLifeExpectancy;
   }
 
-}
-
-  // function ageInYears() {
-  //   let birthdate = new Date(birthdate);
-  //   this.birthYear = birthdate.getFullYear();
-  //   this.age = this.CurrentYear - this.birthYear;
-  // }
-
-  function ageInSeconds() {
-    let seconds = this.age * 31536000;
+  ageInSeconds() {
+    let seconds = age * 31536000;
     return seconds;
   }
 
-
-function ageOnMercury(age) {
-    let earthDays = age * 365;
+  mercuryAge(age) {
+    const earthDays = age * 365;
     let mercuryYears = earthDays / 88;
     return mercuryYears;
 }
 
-  function ageOnVenus(age) {
-    let earthDays = age * 365;
+  venusAge(age) {
+    const earthDays = age * 365;
     let venusYears = earthDays / 225;
     return venusYears;
   }
 
-  function ageOnMars(age) {
-    let earthDays = age * 365;
+  marsAge(age) {
+    const earthDays = age * 365;
     let marsYears = earthDays / 687;
     return marsYears;
   }
 
-  function ageOnJupiter(age) {
-    let earthDays = age * 365;
+  jupiterAge(age) {
+    const earthDays = age * 365;
     let jupiterYears = earthdays / (11.8 * 365);
     return jupiterYears;
   }
 
-  // function secondsDifference() {
-  //   let bdate1 = new Date(birthdate);
-  //   let bdate2 = new Date(birthdate);
-  // }
-
-  function mercuryLifeExpectancy() {
-    let earthDays = this.earthLifeExpectancy * 365;
-    let mercuryYears = earthDays / 88;
-    return mercuryYears;
-  }
-
-  function venusLifeExpectancy() {
-    let earthDays = this.earthLifeExpectancy * 365;
-    let venusYears = earthDays / 225;
-    return venusYears;
-  }
-
-  function marsLifeExpectancy() {
-    let earthDays = this.earthLifeExpectancy * 365;
-    let marsYears = earthDays / 687;
-    return marsYears;
-  }
-
-  function jupiterLifeExpectancy() {
-    let earthDays = this.earthLifeExpectancy * 365;
-    let marsYears = earthDays / (11.8 * 365);
-    return jupiterYears;
-  }
+//   mercuryDeath(age) {
+//     const earthDays = age * 365;
+//     let earthLifeExpectancy = 70 * ;
+//     let mercurylifeExpectancy = earthLifeExpectancy / 88;
+//     let difference = mercurylifeExpectancy - age;
+//     return difference;
+//   }
+//
+//   venusDeath(age) {
+//     const earthDays = age * 365;
+//     let earthLifeExpectancy = 70;
+//     let venusYears = earthDays / 225;
+//     let difference = venusLifeExpectancy - age;
+//     return difference;
+//   }
+//
+//   marsDeath(age) {
+//     const earthDays = earthLifeExpectancy * 365;
+//     let marsYears = earthDays / 687;
+//     return marsYears;
+//     let difference = marsYears - earthLifeExpectancy;
+//     return difference;
+//   }
+//
+//   jupiterDeath(age) {
+//     const earthDays = earthLifeExpectancy * 365;
+//     let jupiterYears = earthDays / (11.8 * 365);
+//     let difference = venusYears - earthLifeExpectancy;
+//     return difference;
+//   }
+// }

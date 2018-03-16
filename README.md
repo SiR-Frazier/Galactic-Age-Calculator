@@ -7,8 +7,10 @@
 ## Description
 _This is an Epicodus code review project that allows a user to provide their age and to convert the age in Mercury, Venus, Mars, and Jupiter years. In addition, the app can convert human years into seconds and return the estimated life expectancy for a given planet._
 
-#### _Summary_
-* 
+#### _Specs_
+* Take a persons age in years and converts it to seconds;
+
+* Take a persons age in years and converts it to Mercury years;
 
 ### Known Bugs
 * This is an unfinished game.  The development focus is on backend logic and testing.  
