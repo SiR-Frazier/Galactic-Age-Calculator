@@ -1,67 +1,65 @@
 export class User {
-  constructor(age, birthday) {
+  constructor() {
     this.age = age;
-    this.birthday = birthday
-    this.earthLifeExpectancy = earthLifeExpectancy;
+    this.date = date;
+    this.currentYear = year;
+    this.birthYear = birthYear
+    this.earthLifeExpectancy = 71;
+  }
+
+  ageInYears() {
+    this.currentYear = new Date().getFullYear();
+    this.birthYear = new Date().getFullYear();
+    this.age = currentYear - birthYear;
+    return this.age;
   }
 
   ageInSeconds() {
-    let seconds = age * 31536000;
+    let seconds = this.age * 31536000;
     return seconds;
   }
 
-  mercuryAge(age) {
-    const earthDays = age * 365;
-    let mercuryYears = earthDays / 88;
+  mercuryAge() {
+    let mercuryYears = parseInt(this.age / .24);
     return mercuryYears;
 }
 
-  venusAge(age) {
-    const earthDays = age * 365;
-    let venusYears = earthDays / 225;
+  venusAge() {
+    let venusYears = parseInt(this.age / .62);
     return venusYears;
   }
 
-  marsAge(age) {
-    const earthDays = age * 365;
-    let marsYears = earthDays / 687;
+  marsAge() {
+    let marsYears = parseInt(this.age / 1.88);
     return marsYears;
   }
 
-  jupiterAge(age) {
-    const earthDays = age * 365;
-    let jupiterYears = earthdays / (11.8 * 365);
+  jupiterAge() {
+    let jupiterYears = parseInt(this.age / 11.86);
     return jupiterYears;
   }
 
-//   mercuryDeath(age) {
-//     const earthDays = age * 365;
-//     let earthLifeExpectancy = 70 * ;
-//     let mercurylifeExpectancy = earthLifeExpectancy / 88;
-//     let difference = mercurylifeExpectancy - age;
-//     return difference;
-//   }
-//
-//   venusDeath(age) {
-//     const earthDays = age * 365;
-//     let earthLifeExpectancy = 70;
-//     let venusYears = earthDays / 225;
-//     let difference = venusLifeExpectancy - age;
-//     return difference;
-//   }
-//
-//   marsDeath(age) {
-//     const earthDays = earthLifeExpectancy * 365;
-//     let marsYears = earthDays / 687;
-//     return marsYears;
-//     let difference = marsYears - earthLifeExpectancy;
-//     return difference;
-//   }
-//
-//   jupiterDeath(age) {
-//     const earthDays = earthLifeExpectancy * 365;
-//     let jupiterYears = earthDays / (11.8 * 365);
-//     let difference = venusYears - earthLifeExpectancy;
-//     return difference;
-//   }
-// }
+  lifeLeftMercury() {
+    let mercuryAvgLife = parseInt(this.earthLifeExpectancy/ .24);
+    let yearsLeft = mercuryAvgLife - parseInt(this.age/ .24);
+    return yearsLeft;
+  }
+
+  lifeLeftVenus() {
+    let venusAvgLife = parseInt(this.earthLifeExpectancy/ .62);
+    let yearsLeft = venusAvgLife - parseInt(this.age/ .62)
+    return yearsLeft;
+  }
+
+  lifeLeftMars() {
+    let marsAvgLife = parseInt(this.earthLifeExpectancy/ 1.88);
+    let yearsLeft = marsAvgLife - parseInt(this.age/ 1.88)
+    return yearsLeft;
+  }
+
+  lifeLeftJupiter() {
+    let jupiterAvgLife = parseInt(this.earthLifeExpectancy/ 11.86);
+    let yearsLeft = jupiterAvgLife - parseInt(this.age/ 11.86)
+    return yearsLeft;
+  }
+}
