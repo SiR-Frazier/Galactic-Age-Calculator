@@ -1,73 +1,92 @@
 export class User {
-  constructor() {
+  constructor(age) {
     this.age = age;
-    this.currentYear = year;
-    this.birthYear = birthYear
+    // this.currentYear = year;
+    // this.birthYear = birthYear;
     this.earthLifeExpectancy = 71;
   }
 
   ageInYears() {
-    this.currentYear = new Date().getFullYear();
-    this.birthYear = new Date().getFullYear();
-    this.age = this.currentYear - this.birthYear;
+    const currentYear = new Date().getFullYear();
+    const birthYear = new Date().getFullYear();
+    this.age = currentYear - birthYear;
     return this.age;
   }
 
-  ageInSeconds() {
+  ageInSeconds(age) {
     const seconds = this.age * 31536000;
     return seconds;
   }
 
-  differenceInSeconds(dateA, dateB) {
-    let dateA = new Date(dateA);
-    let dateB = new Date(dateB);
-    let difference = (dateA.getTime()/ 1000) - (dateB.getTime()/ 1000);
-    return difference;
-  }
+  // differenceInSeconds(userA, userB) {
+  //   let userA = new User(age);
+  //   let userB = new User(age);
+  //   let difference = (userA * 31536000) - (userB * 31536000);
+  //   return difference;
+  // }
 
-  mercuryAge() {
-    const mercuryYears = parseInt(this.age / .24);
+  mercuryAge(age) {
+    const mercuryYears = Math.round(this.age / .24);
     return mercuryYears;
 }
 
-  venusAge() {
-    const venusYears = parseInt(this.age / .62);
+  venusAge(age) {
+    const venusYears = Math.round(this.age / .62);
     return venusYears;
   }
 
-  marsAge() {
-    const marsYears = parseInt(this.age / 1.88);
+  marsAge(age) {
+    const marsYears = Math.round(this.age / 1.88);
     return marsYears;
   }
 
-  jupiterAge() {
-    const jupiterYears = parseInt(this.age / 11.86);
+  jupiterAge(age) {
+    const jupiterYears = Math.round(this.age / 11.86);
     return jupiterYears;
   }
 
-  lifeLeftMercury() {
-    const mercuryAvgLife = parseInt(this.earthLifeExpectancy/ .24);
-    const yearsLeft = mercuryAvgLife - parseInt(this.age/ .24);
-    return yearsLeft;
+  lifeLeftMercury(age) {
+    const mercuryAvgLife = Math.round(this.earthLifeExpectancy/ .24);
+    const mercuryAge = Math.round(this.age/ .24);
+    const yearsLeft = mercuryAvgLife - mercuryAge;
+    if (mercuryAge > mercuryAvgLife) {
+      alert("Whoa! Keep on truckin'!")
+    } else {
+      return yearsLeft;
+    }
   }
 
-  lifeLeftVenus() {
-    const venusAvgLife = parseInt(this.earthLifeExpectancy/ .62);
-    const yearsLeft = venusAvgLife - parseInt(this.age/ .62)
-    return yearsLeft;
+  lifeLeftVenus(age) {
+    const venusAvgLife = Math.round(this.earthLifeExpectancy/ .62);
+    const venusAge =  Math.round(this.age/ .62);
+    const yearsLeft = venusAvgLife - venusAge;
+    if (venusAge > venusAvgLife) {
+      alert("Whoa! Keep on truckin'!")
+    } else {
+      return yearsLeft;
+    }
   }
 
-  lifeLeftMars() {
-    const marsAvgLife = parseInt(this.earthLifeExpectancy/ 1.88);
-    const yearsLeft = marsAvgLife - parseInt(this.age/ 1.88)
-    return yearsLeft;
+  lifeLeftMars(age) {
+    const marsAvgLife = Math.round(this.earthLifeExpectancy/ 1.88);
+    const marsAge = Math.round(this.age/ 1.88);
+    const yearsLeft = marsAvgLife - marsAge;
+    if (marsAge > marsAvgLife) {
+      alert("Whoa! Keep on truckin'!")
+    } else {
+      return yearsLeft;
+    }
   }
 
-  lifeLeftJupiter() {
-    const jupiterAvgLife = parseInt(this.earthLifeExpectancy/ 11.86);
-    const yearsLeft = jupiterAvgLife - parseInt(this.age/ 11.86)
-    if(years)
-    return yearsLeft;
+  lifeLeftJupiter(age) {
+    const jupiterAvgLife = Math.round(this.earthLifeExpectancy/ 11.86);
+    const ageOnJupiter = Math.round(this.age/ 11.86);
+    const yearsLeft = jupiterAvgLife - ageOnJupiter;
+    if(ageOnJupiter > jupiterAvgLife) {
+      alert("Whoa! Keep on truckin'!")
+    } else {
+      return yearsLeft;
+    }
   }
 
 }
