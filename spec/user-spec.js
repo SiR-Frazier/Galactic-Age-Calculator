@@ -35,7 +35,7 @@ describe('User', function() {
 
   it('will return how many years the user has left on Mercury based on their age', function() {
     let user = new User(32);
-    expect(user.lifeLeftMercury(32)).toEqual(162)
+    expect(user.lifeLeftMercury(32)).toEqual(163)
   });
 
   it('will return how many years the user has left on Venus', function() {
@@ -45,7 +45,7 @@ describe('User', function() {
 
   it('will return how many years the user has left on Mars', function() {
     let user = new User(32);
-    expect(user.lifeLeftMars(32)).toEqual(20)
+    expect(user.lifeLeftMars(32)).toEqual(21)
   });
 
   it('will return how many years the user has left on Jupiter', function() {
