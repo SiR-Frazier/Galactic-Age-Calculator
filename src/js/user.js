@@ -18,12 +18,12 @@ export class User {
     return seconds;
   }
 
- differenceInSeconds(date1, date2) {
-    let present = new Date(date1);
-    let past = new Date(date2);
-    let difference = (present * 31536000) - (past * 31536000);
+  differenceInSeconds(date1, date2) {
+    let presentInSec = new Date(date1).getTime()/1000;
+    let pastInSec = new Date(date2).getTime()/1000
+    let difference = presentInSec - pastInSec;
     return difference;
- }
+  }
 
   mercuryAge(age) {
     const mercuryYears = Math.round(this.age / .24);

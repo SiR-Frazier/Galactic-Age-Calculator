@@ -1,6 +1,10 @@
 import { User } from './../src/js/user.js';
 
 describe('User', function() {
+  let user;
+  beforeEach(function() {
+    user = new User();
+  });
 
   it('will return the input age in seconds', function(){
     let user = new User(32);
@@ -8,9 +12,9 @@ describe('User', function() {
   });
 
   it('will return the difference in seconds between years', function() {
-    let present = new Date();
-    let birthDate = new Date(1986,04,23);
-    expect(user.differenceInSeconds(present,birthDate)).toEqual(63072000)
+    let present = new Date('2018,03,25');
+    let birthDate = new Date('1986,04,23');
+    expect(user.differenceInSeconds(present,birthDate)).toEqual(1007334000)
   });
 
   it('will return the age in years on the planet Mercury', function() {
