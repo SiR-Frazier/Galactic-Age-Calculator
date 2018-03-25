@@ -7,11 +7,11 @@ describe('User', function() {
     expect(user.ageInSeconds(32)).toEqual(1009152000)
   });
 
-  // it('will return the difference in seconds between ages', function() {
-  //   let user1 = new User(50);
-  //   let user2 = new User(35);
-  //   expect(user.differenceInSeconds(50,35)).toEqual(473040000)
-  // });
+  it('will return the difference in seconds between years', function() {
+    let present = new Date();
+    let birthDate = new Date(1986,04,23);
+    expect(user.differenceInSeconds(present,birthDate)).toEqual(63072000)
+  });
 
   it('will return the age in years on the planet Mercury', function() {
     let user = new User(32);
